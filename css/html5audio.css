@@ -1,0 +1,336 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:none;
+}
+
+a{ 
+	text-decoration: none; 
+}
+
+body {
+	background:#202914;
+}
+
+
+/* wrapper for player and playlist */
+#componentWrapper{
+	position:relative;
+	width:512px;
+	height:325px;
+	border-radius:10px;
+	margin-top:40px;
+	margin-left:auto;
+	margin-right:auto;
+	background-image:url(../img/backplayer.jpg);
+	-moz-box-shadow: 0px 5px 5px #111;
+	-webkit-box-shadow: 0px 5px 5px #111;
+	box-shadow: 0px 5px 5px #111;
+}
+
+/* player holder */
+#componentWrapper .playerHolder{
+	position:absolute;
+	top:180px;
+	left:0px;
+	width:510px;
+	height:140px;
+	border-radius: 0px 0px 10px 10px;
+}
+
+/* player audio name mask for the name scroll function. Set width of the scrolling mask here. Also adjust height if neccesarry. */
+#componentWrapper .player_mediaName_Mask{
+	position:absolute;
+	top:110px;
+	right:17px;
+	width:482px;
+	height:20px;
+	overflow:hidden;
+	background:#333;
+	border-radius:5px;
+	opacity:0.6;
+}
+
+/* player audio name */
+#componentWrapper .player_mediaName{
+	position:absolute;
+	top:1px;
+	left:10px;
+	white-space: nowrap;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size:14px;
+	color:#fff;
+}
+
+/* player audio time */
+#componentWrapper .player_mediaTime{
+	position:absolute;
+	top:20px;
+	right:17px;
+	color:#fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+#componentWrapper .player_mediaTime_current{
+	position:relative;
+	top:0px;
+	left:0px;
+	float:left;
+}
+
+#componentWrapper .player_mediaTime_total{
+	position:relative;
+	top:0px;
+	left:0px;
+	float:left;
+}
+
+/* player holder for (previous,play/pause,next) buttons */
+#componentWrapper .player_controls{
+	position:absolute;
+	top:82px;
+	left:11px;
+}
+
+/* player previous */
+#componentWrapper .controls_prev{
+	position:absolute;
+	top:-30px;
+	left:0px;
+	width:40px;
+	height:40px;
+}
+
+/* player play/pause */
+#componentWrapper .controls_toggle{
+	position:absolute;
+	top:-35px;
+	left:60px;
+	width:50px;
+	height:50px;
+}
+
+/* player next */
+#componentWrapper .controls_next{
+	position:absolute;
+	top:-30px;
+	left:130px;
+	width:40px;
+	height:40px;
+}
+
+/* player loop */
+#componentWrapper .player_loop{
+	position:absolute;
+	top:-26px;
+	left:410px;
+	width:33px;
+	height:33px;
+}
+
+/* player shuffle */
+#componentWrapper .player_shuffle{
+	position:absolute;
+	top:-26px;
+	left:452px;
+	width:33px;
+	height:33px;
+}
+
+#componentWrapper .player_volume{
+	position:absolute;
+	top:-26px;
+	left:190px;
+	width:33px;
+	height:33px;
+}
+
+/* player volume, serves as hit as well */
+#componentWrapper .volume_seekbar{
+	position:absolute;
+	top:-19px;
+	left:229px;
+	width:170px;
+	height:16px;
+}
+
+#componentWrapper .volume_bg{
+	position:absolute;
+	top:5px;
+	left:0px;
+	width:168px;
+	height:6px;
+	background:#333333;
+}
+
+#componentWrapper .volume_level{
+	position:absolute;
+	top:5px;
+	left:0px;
+	width:0px;
+	height:6px;
+	background:#ffffff;
+}
+
+#componentWrapper .player_volume_tooltip{
+	position:absolute;
+	top:15px;
+	/* left is set in code */
+	width:35px;/* width is not automatically set so adjust it yourself if you change font or font size */
+	height:16px;
+	background:#333;
+	display:none;
+	-moz-box-shadow: 1px 1px 1px #222;
+	-webkit-box-shadow: 1px 1px 1px #222;
+	box-shadow: 1px 1px 1px #222;
+}
+
+#componentWrapper .player_volume_tooltip_value{
+	position:absolute;
+	top:2px;
+	/* left is set in code */
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+
+/* player progress, serves as hit as well */
+#componentWrapper .player_progress{
+	position:absolute;
+	top:20px;
+	left:11px;
+	/* for hit */
+	width:410px;
+	height:16px;
+	/*background:green;*/
+}
+
+#componentWrapper .progress_bg{
+	position:absolute;
+	top:5px;
+	left:10px;
+	width:390px;
+	height:6px;
+	background:#222222;
+}
+
+#componentWrapper .load_progress{
+	position:absolute;
+	top:5px;
+	left:10px;
+	width:0px;
+	height:6px;
+	background:#444444;
+}
+
+#componentWrapper .play_progress{
+	position:absolute;
+	top:5px;
+	left:10px;
+	width:0px;
+	height:6px;
+	background:#ffffff;
+}
+
+#componentWrapper .player_progress_tooltip{
+	position:absolute;
+	top:40px;
+	/* left is set in code */
+	width:70px;/* width is not automatically set so adjust it yourself if you change font or font size */
+	height:16px;
+	background:#333;
+	display:none;
+	
+	-moz-box-shadow: 1px 1px 1px #222;
+	-webkit-box-shadow: 1px 1px 1px #222;
+	box-shadow: 1px 1px 1px #222;
+}
+
+#componentWrapper .player_progress_tooltip_value{
+	position:absolute;
+	top:2px;
+	/* left is set in code */
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+
+/* playlist holder */	
+#componentWrapper .playlistHolder{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:510px;
+	height:180px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+#componentWrapper .componentPlaylist{
+	position:absolute;
+	top:30px;
+	left:20px;
+	width:460px;
+	height:150px;
+	padding-left:5px;
+}
+
+/* playlist holder for playlist items */	
+#componentWrapper .playlist_inner{
+	position:relative;
+	top:0px;
+	left:0px;
+	height:100%;
+}
+
+/* playlist items */	
+#componentWrapper .componentPlaylist .playlistItem{
+	position:relative;
+	top:0px;
+	left:0px;
+	margin-bottom:8px;
+	clear:left;
+	display:inline-block;
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	width:100%;
+	height:100%;
+	list-style:none;
+}
+
+#componentWrapper .componentPlaylist .playlistItem:last-child {  
+	margin-bottom:0px;
+}
+
+/* adjust rollover on playlist item */
+#componentWrapper .componentPlaylist .playlistItem a:hover{
+	color:#66ffff;
+}
+
+/* adjust disabled state on playlist item */
+#componentWrapper .playlistSelected {
+	float:left;
+	color: #66ffff;
+}
+
+/* adjust normal state on playlist item */
+#componentWrapper .playlistNonSelected {
+	float:left;
+	color: #ffffff;
+}
+
+/* for parsing feed xml */	
+#componentWrapper .feedParser{
+	display:none;
+}	
+/* font calculations for song scroll */
+#componentWrapper .fontMeasure{
+	position:absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:15px;
+    white-space: nowrap;
+	visibility:hidden;
+}

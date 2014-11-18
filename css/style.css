@@ -1,0 +1,276 @@
+body {
+	overflow-x:hidden;
+	overflow-y: auto;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	background:#292929;
+	margin:0;
+}
+
+img {
+	width:100%;
+	max-width:100%;	
+}
+
+img.title {
+	width:25%;
+	max-width:25%;	
+}
+
+#contentdot{
+	height:100%;
+	width:100%;	
+	background-color : black;
+}
+
+.dot{
+	/* The stage contains 192 .dot divs: */
+	float:left;
+	height:15px;
+	width:15px;
+}
+
+.dot.active{
+	/* When assigned the active class, the div shows a background image of a dot: */
+	background:url(../img/dot.png) no-repeat center center;
+	/*
+	height:100%;
+	width:100%;
+	*/
+}
+
+.clear{
+	/* Old-school clear fix hack to clear the floats: */
+	clear:both;
+}
+#page {
+	width:960px;
+	position:relative;
+	margin-top:20px;
+	padding-left:10px;
+}
+
+.menu_btn {
+	background: #f2b33d url(../img/menu_bg.png) center center no-repeat;
+	display:block;
+	height:42px;
+	width:42px;
+	position:absolute;
+	top:0;
+	right:30px;
+}
+
+#menu {
+	height:100%;
+	position:fixed;
+	background:#f2b33d;
+	top:0;
+	bottom:0;
+	height:100%;
+	width:240px;
+	right:-240px;
+	z-index:9999;
+}
+
+#menu ul {
+	padding:0;
+	margin:0;
+	list-style:none;
+	color:white;
+}
+
+#menu ul li {
+	height:47px;
+	padding-left:30px;
+	line-height:47px;
+	border-bottom:1px solid #d39b33;
+}
+
+#menu ul li.active {
+	background:#fbce52;	
+}
+
+
+#menu ul li:hover {
+	background:#fbce52;
+	
+}
+
+#menu ul li a {
+	color:white;
+	text-decoration:none;
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	display:block;
+}
+
+.close {
+	display:block;
+	background:#373737 url(../img/croix.png) center center no-repeat;
+	height:47px;
+	width:47px;
+	position:absolute;
+	top:0;
+	left:-47px;	
+}
+
+#logo {
+	padding-left:20px;
+	max-width:309px;
+	display:block;
+}
+
+.article {
+	width:450px;
+	float:left;
+	margin:10px;
+	border-top:3px solid #f2b33d;
+	background:#2f2f2f;	
+}
+
+.article img {
+	border-bottom:3px solid #353535;	
+}
+
+h2 {
+	font-weight:300;
+	color:white;
+	padding-left:15px;
+}
+
+.article p {
+	color:#595959;
+	padding:0 15px;
+	font-size:11px;
+	line-height:18px;
+	text-align:justify;	
+}
+
+a.read_more {
+	color:white;
+	padding-left:15px;
+	text-decoration:none;
+	background:url(../img/fleche.png) no-repeat 140px center;
+	height:25px;
+	display:block;
+	line-height:25px;
+	margin-bottom:15px;
+}
+button.read_more {
+	color:white;
+	text-align : center;
+	border-radius: 10px;
+	padding-left:10px;
+	text-align: justify;
+	text-decoration:none;
+	height:25px;
+	display:block;
+	line-height:25px;
+	margin-bottom:15px;
+}
+
+.read_more {
+	color:white;
+	padding-left:15px;
+	text-decoration:none;
+	background:url(../img/fleche.png) no-repeat 140px center;
+	height:25px;
+	display:block;
+	line-height:25px;
+	margin-bottom:15px;
+}
+
+#stage{
+	/* The stage contains the individual divs that comprise the halftone icon: */
+	background-color : yellow ;
+	height:600px;
+	position:absolute;
+	right:10px;
+	top:20px;
+	width:400px;
+}
+
+
+
+
+
+/* Disable iOS/WinMobile font size changes */
+@media screen and (max-width: 600px),
+screen and (max-device-width: 480px) {
+	html {
+		-ms-text-size-adjust: none;
+		-webkit-text-size-adjust: none;
+	}
+}
+
+/* ==== Media Queries ==== */
+
+/* Wide Screen */
+@media (min-width : 1280px) {
+	
+	#page {
+		width:1280px;
+	}
+	
+	.article {
+		width:400px;
+	}
+    
+}
+
+/* Default Screen */
+@media (min-width : 960px) and (max-width : 1280px) { 
+	
+	#page {
+		width:960px;
+	}
+
+}
+
+/* Tablet Screen Big */
+@media (min-width : 720px) and (max-width : 960px) {
+	
+	#page {
+		width:720px;
+	}
+	
+	.article {
+		width:330px;
+	}
+
+}
+
+/* Tablet Screen Small */
+@media (min-width : 640px) and (max-width : 720px) {
+	
+	#page {
+		width:640px;
+	}
+	
+	.article {
+		width:600px;
+	}
+    
+}
+
+/* Mobile Screen Wide */
+@media (max-width : 640px) {
+	
+	#page {
+		width:100%;
+		padding:0;
+	}
+	
+	.menu_btn {
+		right:10px;	
+	}
+	
+	#logo {
+		width: 70%;	
+	}
+	
+	.article {
+		width:auto;
+	}
+
+}
